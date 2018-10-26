@@ -26,11 +26,11 @@ time2.Load(time.Now)
 #### 获取当天0点时间
 
 ```go
-time2.Now().CurrentDayStart()
+time2.Now().Loc("Asia/Shanghai").CurrentDayStart()
 ```
 
 #### 获取当天零点时间戳
 
 ```go
-time2.Now().CurrentDayStart().Unix()
+time2.Now().Loc("Asia/Shanghai").CurrentDayStart().Unix()
 ```

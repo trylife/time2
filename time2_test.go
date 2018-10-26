@@ -7,7 +7,9 @@ import (
 
 func TestTime2_CurrentDayStart(t *testing.T) {
 	t2 := time2.Now()
-	st := t2.CurrentDayStart()
+	st := t2.Loc("Asia/Shanghai").CurrentDayStart()
+	t.Log(st.Local().Location())
+	t.Log("unix timestamp:", st.Unix())
 	t.Log(st)
 	t.Log(st, st.Hour(), st.Minute(), st.Second(), st.Nanosecond())
 
